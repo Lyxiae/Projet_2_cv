@@ -1,3 +1,5 @@
+/*STYLES GENERAUX*/
+
 :root {
     --fontBase: 'Lato', sans-serif;
     --fontTitles:'Montserrat', sans-serif;
@@ -11,36 +13,18 @@
 body {
     background:#eee;
 }
+
 p {
     font: normal normal 0.84em/150% var(--fontBase);
     padding:5px;
      }
-
-     @media screen and (max-width:980px)
-     {
      
-         p {
-             font:normal normal 600 1.2em/100% var(--fontTitles);
-             padding:5px 7%;
-         }
-     }
-
 .container {
     width: 60%;
     min-width:700px;
     height:auto;
     margin:auto;
     display:flex;
-}
-
-@media screen and (max-width:1024px)
-{
-
-    .container {
-        width:auto;
-        min-width:none;
-        margin:0 auto;
-    }
 }
 
 /*COLONNE DE GAUCHE*/
@@ -67,17 +51,7 @@ p {
     padding:5px 0px;
 }
 
-@media screen and (max-width:1024px)
-{
-
-    .column h2 {
-       
-        font:normal normal 600 1.45em/130% var(--fontTitles);
-
-    }
-}
-
-img.photo {
+.photo {
     width:60%;
     height:auto;
     border-radius:50%;
@@ -90,14 +64,6 @@ img.photo {
     text-align:justify;
 }
 
-@media screen and (max-width:980px)
-{
-
-    .column p {
-        word-break:break-all;
-    }
-}
-
 .column div {
     padding:5px 20px;
 }
@@ -107,16 +73,7 @@ img.photo {
     
 }
 
-@media screen and (max-width:1024px)
-{
-
-    .column p span {
-        font:normal normal 600 1.3em/100% var(--fontTitles);
-        
-    }
-}
-
-div.loisirs {
+.loisirs {
     width:100%;
     display:flex;
     justify-content:space-around;
@@ -137,12 +94,12 @@ div.loisirs {
 
 /*PARTIE DROITE*/
 
-section.main {
+.main {
     padding: 40px;
     background-color:#fff;
 }
 
-section.main h1 {
+.main h1 {
     font: normal normal 500 50px/130% var(--fontTitles);
     text-transform:uppercase;
     position:relative;
@@ -151,52 +108,34 @@ section.main h1 {
 
 }
 
-section.main h1 span {
+.main h1 span {
     color:var(--colorBase);
 }
 
-section.main h2 {
+.main h2 {
     position:relative;
     margin:0px;
     font: normal normal 500 20px/150% var(--fontBase);
 }
 
-@media screen and (max-width:1024px)
-{
-
-    section.main h2 {
-        font: normal normal 500 1.5em/150% var(--fontBase);
-    }
-    
+.main h2:after {
+    content:"";
+    width:100px;
+    height:0px;
+    border-bottom: 2px solid var(--colorBase);
+    position:absolute;
+    bottom:-0px;
+    left:0px;
 }
 
-section.main h2:after {
-content:"";
-width:100px;
-height:0px;
-border-bottom: 2px solid var(--colorBase);
-position:absolute;
-bottom:-0px;
-left:0px;
-}
-
-
-section.main h3 {
+.main h3 {
     font: normal normal 400 24px/130% var(--fontTitles);
     text-transform:uppercase;
     letter-spacing:-1px;
     border-bottom: 1px solid var(--colorBase);
 }
-@media screen and (max-width:1024px)
-{
 
-    section.main h3 {
-        font: normal normal 400 1.7em/130% var(--fontTitles);
-
-    }
-    
-}
-section.main h3 i.fas {
+.main h3 i.fas {
     color:var(--colorBase);
     padding: 0px 5px;
 }
@@ -214,14 +153,6 @@ section.main h3 i.fas {
     position:relative;
 }
 
-@media screen and (max-width:1024px)
-{
-
-    .date {
-        font: normal normal 700 1.4em/130% var(--fontBase);
-    }
-    
-}
 
 .date .fas {
     position:absolute;
@@ -259,3 +190,42 @@ section.main h3 i.fas {
     width:50%;
 }
 
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:980px){
+    p {
+             font:normal normal 600 1.2em/100% var(--fontTitles);
+             padding:5px 7%;
+    }
+    .column p {
+        word-break:break-all;
+    }
+}
+
+
+@media screen and (max-width:1024px){
+    .container {
+        width:auto;
+        min-width:none;
+        margin:0 auto;
+    }
+    .date {
+        font: normal normal 700 1.4em/130% var(--fontBase);
+    }
+    .column h2 {
+       
+        font:normal normal 600 1.45em/130% var(--fontTitles);
+
+    }
+    .main h2 {
+        font: normal normal 500 1.5em/150% var(--fontBase);
+    }
+    .main h3 {
+        font: normal normal 400 1.7em/130% var(--fontTitles);
+
+    }
+    .column p span {
+        font:normal normal 600 1.3em/100% var(--fontTitles);
+        
+    }
+}
