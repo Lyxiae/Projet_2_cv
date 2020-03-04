@@ -17,7 +17,7 @@ body {
 p {
     font: normal normal 0.84em/150% var(--fontBase);
     padding:5px;
-     }
+}
      
 .container {
     width: 60%;
