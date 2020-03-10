@@ -5,8 +5,8 @@
 
         <meta charset="UTF-8">
         <title>Marjolaine Robin - CV</title>
-        <meta name="description" content="Page description. No longer than 155 characters." />
-
+        <meta name="description" content="CV Marjolaine Robin, Developpeuse Web." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary">
         
@@ -14,11 +14,13 @@
 
         <meta property="og:title" content="Marjolaine Robin - CV"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="http://www.example.com/"/>
+        <meta property="og:url" content="http://lyxiae.github.io/"/>
         <meta property="og:image" content="photo_oc2.png"/>
         <meta property="og:description" content="Marjolaine Robin - CV"/>
         <!-- CSS -->
-        <link href="cv_style.css" type="text/css" rel="stylesheet">
+        
+        <link href="styles/reset.css" type="text/css" rel="stylesheet">
+        <link href="styles/cv_style.css" type="text/css" rel="stylesheet">
         <!-- FONTS-->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
@@ -29,43 +31,67 @@
 
     <body>
         <div class="container">
-            <section class="column">
+            <aside class="column">
                 <img src="photo_oc2.jpg" alt="photo" class="photo"/>
-
+                <nav class="navaside">
+                    <ul>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#recommandations">Recommandations</a></li>
+                    </ul>
+                </nav>
                 <h2>Contact</h2>
-                <div>
-                <p><span>Adresse</span>
-                <br>6 rue du blaireau
-                <br>13500 Martigues, France</p>
-                <p><span>Téléphone</span>
-                <br>(+33) 06 06 78 77 73
-                </p>
-                <p><span>Email</span>
-                <br>robin.marjolaine@gmail.com
-                </p>
-                <p><span>Site web</span>
-                <br>siteweb.com
-                </p>
-            </div>
+                <div class="contact">
+                    <p>
+                        <span>Adresse</span>
+                        <br>6 rue du blaireau
+                        <br>13500 Martigues, France
+                    </p>
+                    <p>
+                        <span>Téléphone</span>
+                        <br>(+33) 06 06 78 77 73
+                    </p>
+                    <p>
+                        <span>Email</span>
+                        <br>robin.marjolaine@gmail.com
+                    </p>
+                    <p>
+                        <span>Site web</span>
+                        <br>siteweb.com
+                    </p>
+                </div>
                 <h2>A propos de moi</h2>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.</p>
-            </div>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
+                    </p>
+                </div>
                 <h2>Loisirs</h2>
                 <div class="loisirs">
                     <i class="fas fa-pen-fancy" title="Écriture"></i>
                     <i class="fas fa-film" title="Cinéma & séries"></i>
                     <i class="fas fa-dumbbell" title="Fitness & Musculation"></i>
                 </div>
-            </section>
-            <section class="main">
-                <h1><span>Marjolaine</span> Robin</h1>
-                <h2>Développeuse Web</h2>
+            </aside>
+
+            <main class="main">
+                <div class="header">
+                    <div>
+                        <h1><span>Marjolaine</span> Robin</h1>
+                        <h2>Développeuse Web</h2>
+                    </div>
+                    <img src="photo_oc2.jpg" alt="photo" class="photomq"/>
+                </div>
+                <nav class="navmain">
+                    <a href="#formation">Formation</a>
+                    <a href="#experience">Expérience</a>
+                    <a href="#recommandations">Recommandations</a>
+                </nav>
 
                 <section id="formation">
-                    <h3> <i class="fas fa-graduation-cap"></i> Formation</h3>
+                    <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
                     <div class="item">
-                        <div class="date"><i class="fas fa-dot-circle"></i>
+                        <div class="periode"><i class="fas fa-dot-circle"></i>
                             2020 - 2020
                             <br>Paris
                         </div>
@@ -76,7 +102,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="date"><i class="fas fa-circle"></i>
+                        <div class="periode"><i class="fas fa-circle"></i>
                             2012 - 2015
                             <br>Montpellier
                         </div>
@@ -91,7 +117,7 @@
                 <section id="experience">
                     <h3> <i class="fas fa-briefcase"></i> Expérience professionnelle</h3>
                     <div class="item">
-                        <div class="date"><i class="fas fa-dot-circle"></i>
+                        <div class="periode"><i class="fas fa-dot-circle"></i>
                             Octobre 2018 - 2020
                             <br>Londres
                         </div>
@@ -102,7 +128,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="date"><i class="fas fa-circle"></i>
+                        <div class="periode"><i class="fas fa-circle"></i>
                             2017 - Juillet 2018
                             <br>Londres
                         </div>
@@ -130,8 +156,7 @@
                         </div>
                     </div>
                 </section>
-
-            </section>
+            </main>
         </div>
     </body>
 </html>
